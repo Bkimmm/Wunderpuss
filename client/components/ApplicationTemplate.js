@@ -20,19 +20,6 @@ import {
   priorityTypes,
 } from '../constants/formFields';
 
-function Copyright() {
-  return (
-    <Typography variant='body2' color='text.secondary' align='center'>
-      {'Copyright © '}
-      <Link color='inherit' href='https://mui.com/'>
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 const theme = createTheme();
 
 export default function createApplication(props) {
@@ -157,8 +144,6 @@ export default function createApplication(props) {
                       name='job_type'
                       select
                       label='Select Job type'
-                      //   value={jobType}
-                      //   onChange={handleJobTypeChange}
                       value={formState['job_type']}
                       onChange={(e) => handleFormStateChange(e)}
                       helperText='Please select a job type'
@@ -233,8 +218,6 @@ export default function createApplication(props) {
                       select
                       fullWidth
                       autoComplete='given-name'
-                      //   value={progressType}
-                      //   onChange={handleProgressTypeChange}
                       value={formState['progress']}
                       onChange={(e) => handleFormStateChange(e)}
                       variant='standard'
@@ -255,8 +238,6 @@ export default function createApplication(props) {
                       select
                       fullWidth
                       autoComplete='given-name'
-                      //   value={priorityType}
-                      //   onChange={handlePriorityChange}
                       value={formState['priority']}
                       onChange={(e) => handleFormStateChange(e)}
                       variant='standard'

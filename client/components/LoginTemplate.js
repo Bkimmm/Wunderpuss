@@ -16,23 +16,23 @@ import GoogleLogin from 'react-google-login';
 import { connect } from 'react-redux';
 import { clientLogin } from '../actions/actions';
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant='body2'
-      color='text.secondary'
-      align='center'
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color='inherit' href='https://mui.com/'>
-        Wunderpuss
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+// function Copyright(props) {
+//   return (
+//     <Typography
+//       variant='body2'
+//       color='text.secondary'
+//       align='center'
+//       {...props}
+//     >
+//       {'Copyright © '}
+//       <Link color='inherit' href='https://mui.com/'>
+//         Wunderpuss
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 
 const theme = createTheme();
 
@@ -164,7 +164,7 @@ function SignIn(props) {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
     </ThemeProvider>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import ProgressBar from './Progressbar.js';
 import { progressTypes } from '../constants/formFields.js';
@@ -9,11 +9,7 @@ import {
   Avatar,
   Typography,
   CardContent,
-  CardActions,
 } from '@mui/material';
-
-// import TextField from '@mui/material/TextField';
-// import MenuItem from '@mui/material/MenuItem';
 
 import { Container, Box, Button, Card } from '@mui/material';
 

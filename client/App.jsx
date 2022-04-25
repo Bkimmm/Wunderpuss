@@ -7,20 +7,21 @@ import LoginTemplate from './components/LoginTemplate';
 import SignUpTemplate from './components/SignUpTemplate.js';
 import ApplicationTemplate from './components/ApplicationTemplate';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<LoginTemplate />} />
-          <Route path='/signup' element={<SignUpTemplate />} />
-          <Route path='/applications' element={<ApplicationTemplate />} />
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/jobs' element={<JobDashboard />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<LoginTemplate />} />
+        <Route path='/signup' element={<SignUpTemplate />} />
+        <Route path='/applications' element={<ApplicationTemplate />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/jobs' element={<JobDashboard />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

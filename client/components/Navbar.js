@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import { connect } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { clientSignout } from '../actions/actions';
+import octopus from '../assets/octopus.png';
 
 function NavBar({ loggedIn, clientSignout }) {
   const navigate = useNavigate();
@@ -49,9 +50,17 @@ function NavBar({ loggedIn, clientSignout }) {
           ></IconButton>
 
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>
-              {' '}
-              Wunderpuss{' '}
+            <Link
+              to='/dashboard'
+              style={{ textDecoration: 'none', color: 'white' }}
+            >
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <img
+                  src={octopus}
+                  style={{ width: '35px', marginRight: '5px' }}
+                />{' '}
+                Wunderpus{' '}
+              </Box>
             </Link>
           </Typography>
 

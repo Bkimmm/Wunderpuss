@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CardApplication from './CardApplication';
-import { Container, Button, Box, Typography, Card } from '@mui/material';
+import { Container, Button, Box, Typography } from '@mui/material';
 import Searching from '../assets/searching.png';
-// /applications/:userId
-function Dashboard(){
-    const [applications, setApplications] = useState([])
-    useEffect(() => {
-    
-        fetch(`/api/applications/${localStorage.getItem("userId")}`)
-        .then((data)=> data.json())
-        .then(res=> setApplications(res))
-   }, [])
-   const deleteApplication = (appId) => {
+
+function Dashboard() {
+  const [applications, setApplications] = useState([]);
+  const navigate = useNavigate();
+  const getApplications = () => {
+    fetch(`/api/applications/${localStorage.getItem('userId')}`)
+      .then((data) => data.json())
+      .then((res) => setApplications(res));
+  };
+  useEffect(() => {
+    if (!localStorage.getItem('userId')) {
+      navigate('/');
+    }
+    getApplications();
+  }, []);
+  const deleteApplication = (appId) => {
     fetch(`/api/application/${appId}`, {
       method: 'DELETE',
     })
