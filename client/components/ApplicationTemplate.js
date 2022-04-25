@@ -291,7 +291,7 @@ export default function createApplication(props) {
             </React.Fragment>
           </React.Fragment>
         </Paper>
-        <Copyright />
+        
       </Container>
     </ThemeProvider>
   );
