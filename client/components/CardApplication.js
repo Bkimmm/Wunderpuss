@@ -49,6 +49,11 @@ function CardApplication(props) {
     props.updateApp(appId, { progress });
     setIsEditing(false);
   };
+
+  const handleCancelChange = () => {
+    setIsEditing(false);
+    setProgress(props.progress);
+  };
   const DESC_LIMIT = 250;
 
   const toggleDescription = (desc) => {
@@ -107,7 +112,7 @@ function CardApplication(props) {
             <Button variant='contained' onClick={handleProgressUpdate}>
               Save
             </Button>
-            <Button variant='contained' onClick={() => setIsEditing(false)}>
+            <Button variant='contained' onClick={handleCancelChange}>
               Cancel
             </Button>
           </Grid>
