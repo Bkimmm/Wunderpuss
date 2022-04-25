@@ -10,7 +10,6 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-
 import MenuItem from '@mui/material/MenuItem';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -291,7 +290,6 @@ export default function createApplication(props) {
             </React.Fragment>
           </React.Fragment>
         </Paper>
-        
       </Container>
     </ThemeProvider>
   );
