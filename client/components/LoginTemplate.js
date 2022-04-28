@@ -60,18 +60,18 @@ function SignIn(props) {
   };
 
   const responseGoogle = (response) => {
-    console.log(response);
-    console.log(response.profileObj);
+    // console.log(response);
+    // console.log(response.profileObj);
     const googleId = response.profileObj.googleId;
     const gmail = response.profileObj.email;
-    console.log(gmail);
-    console.log(googleId);
+    // console.log(gmail);
+    // console.log(googleId);
     Axios.post('/api/auth/oauth', {
       gmail,
       googleId,
     })
       .then((data) => {
-        console.log('response google promise chain');
+        // console.log('response google promise chain');
         props.clientLogin();
         localStorage.setItem('userId', data.data);
         navigate('/dashboard');
